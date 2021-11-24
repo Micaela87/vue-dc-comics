@@ -1,6 +1,6 @@
 <template>
   <footer>
-    <div class="container-flex">
+    <div class="container container-flex">
       <UpperFooter />
       <img src="../../assets/img/dc-logo-bg.png" alt="dc logo">
     </div>

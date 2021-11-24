@@ -1,15 +1,13 @@
 <template>
     <section>
-        <div class="container">
-            <div class="flex-container-column">
-                <div v-for="(data, i) in navFooterData" :key="i" :class="i === 3 ? 'full-height' : ''" class="footer-menu">
-                    <h3>{{ data.title.toUpperCase() }}</h3>
-                    <ul>
-                        <li v-for="(menuData, k) in data.navMenuData" :key="k">
-                            <a href="menuData.url">{{ menuData.text }}</a>
-                        </li>
-                    </ul>
-                </div>
+        <div class="flex-container-column">
+            <div v-for="(data, i) in navFooterData" :key="i" :class="i === 3 ? 'full-height' : ''" class="footer-menu">
+                <h3>{{ data.title.toUpperCase() }}</h3>
+                <ul>
+                    <li v-for="(menuData, k) in data.navMenuData" :key="k">
+                        <a href="menuData.url">{{ menuData.text }}</a>
+                    </li>
+                </ul>
             </div>
         </div>
     </section>
@@ -176,7 +174,7 @@ export default {
 <style scoped lang="scss">
     section {
         height: 35rem;
-        width: 50%;
+        width: 100%;
     }
 
     .flex-container-column {

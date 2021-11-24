@@ -54,6 +54,8 @@ export default {
   section {
     background-color: #303030;
     height: 10rem;
+    position: relative;
+    z-index: 1;
   }
 
   button {
