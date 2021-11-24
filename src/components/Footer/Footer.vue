@@ -1,7 +1,7 @@
 <template>
   <footer>
     <div class="container container-flex">
-      <UpperFooter />
+      <UpperFooter :footerData="menuData"/>
       <img src="../../assets/img/dc-logo-bg.png" alt="dc logo">
     </div>
     <LowerFooter />
@@ -17,6 +17,14 @@ export default {
   components: {
     UpperFooter,
     LowerFooter
+  },
+  props: {
+    menu: Array
+  },
+  data() {
+    return {
+      menuData: this.menu
+    }
   }
 }
 </script>
