@@ -1,11 +1,11 @@
 <template>
     <section>
         <div class="flex-container-column">
-            <div v-for="(data, i) in navFooterData" :key="i" :class="i === 3 ? 'full-height' : ''" class="footer-menu">
+            <div v-for="(data, i) in navFooterData" :key="i" class="footer-menu">
                 <h3>{{ data.title.toUpperCase() }}</h3>
                 <ul>
                     <li v-for="(menuData, k) in data.navMenuData" :key="k">
-                        <a href="menuData.url">{{ menuData.text }}</a>
+                        <a href="menuData.url">{{ capitalizeFirstLetter(menuData.text) }}</a>
                     </li>
                 </ul>
             </div>
@@ -168,6 +168,24 @@ export default {
             ]
         };
     },
+    methods: {
+        capitalizeFirstLetter(string) {
+            let arrString = string.split(' ');
+
+            let arrResult = [];
+            
+            for (let i = 0; i < arrString.length; i++) {
+
+                let string = arrString[i].toLowerCase();
+
+                arrResult.push(string.charAt(0).toUpperCase() + string.slice(1));
+            }
+
+            let result = arrResult.join(' ');
+
+            return result;
+        }
+    },
 }
 </script>
 
@@ -204,9 +222,5 @@ export default {
         text-decoration: none;
         font-size: 1.2rem;
         color: #696355;
-    }
-
-    .full-height {
-        height: 100%;
     }
 </style>

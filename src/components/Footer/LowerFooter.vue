@@ -65,6 +65,7 @@ export default {
     padding: 1rem 2rem;
     box-shadow: none;
     border: 3px solid #037def;
+    cursor: pointer;
   }
 
   h3 {

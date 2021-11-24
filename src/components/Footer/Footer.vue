@@ -24,6 +24,9 @@ export default {
 <style scoped lang="scss">
   footer {
     background-image: url('../../assets/img/footer-bg.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
     height: 45rem;
   }
 </style>

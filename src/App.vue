@@ -10,16 +10,16 @@
 
 <script>
 import Header from "./components/Header.vue";
-import BlueBar from "./components/BlueBar.vue";
 import Footer from "./components/Footer/Footer.vue";
+import BlueBar from "./components/BlueBar.vue";
 
 export default {
   name: 'App',
   components: {
     Header,
-    BlueBar,
-    Footer
-}
+    Footer,
+    BlueBar
+  }
 }
 </script>
 
