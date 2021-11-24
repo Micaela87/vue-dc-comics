@@ -15,4 +15,12 @@ body {
 .container {
     width: 80%;
     margin: 0 auto;
+    height: 100%;
+}
+
+.container-flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
 }

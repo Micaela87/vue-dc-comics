@@ -81,18 +81,12 @@ export default {
         height: 12rem;
         background-color: white;
     }
-    .container-flex {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        height: 100%;
-    }
 
     img {
         width: 8%;
     }
 
-    ul li {
+        ul li {
         display: inline-block;
         margin: 0 1.2rem;
         padding: 3rem 0;
