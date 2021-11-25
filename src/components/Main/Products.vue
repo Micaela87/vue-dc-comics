@@ -1,31 +1,13 @@
 <template>
   <div id="app">
-    <Header :menu="navMenuData"/>
-    <main>
-      <Banner />
-      <Products />
-      <BlueBar />
-    </main>
-    <Footer :menu="navMenuData"/>
+
   </div>
 </template>
 
 <script>
-import Header from "./components/Header.vue";
-import Banner from "./components/Main/Banner.vue";
-import Products from "./components/Main/Products.vue";
-import BlueBar from "./components/Main/BlueBar.vue";
-import Footer from "./components/Footer/Footer.vue";
 
 export default {
-  name: 'App',
-  components: {
-    Header,
-    Footer,
-    BlueBar,
-    Banner,
-    Products
-  },
+  name: 'Products',
   data() {
     return {
           navMenuData: [
