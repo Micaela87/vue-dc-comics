@@ -4,7 +4,7 @@
           <img src="@/assets/img/dc-logo.png" alt="dc logo">
           <nav>
               <ul>
-                  <li v-for="(data, i) in navMenuData" :key="i">
+                  <li v-for="(data, i) in menu" :key="i">
                     <a href="data.url">{{ data.text.toUpperCase() }}</a>
                   </li>
               </ul>
@@ -19,63 +19,6 @@ export default {
   name: 'Header',
   props: {
       menu: Array
-  },
-  data() {
-      return {
-           navMenuData: this.menu
-        // [
-        //       {
-        //           text: 'characters',
-        //           url: '#',
-        //           active: false,
-        //       },
-        //       {
-        //           text: 'comics',
-        //           url: '#',
-        //           active: false,
-        //       },
-        //       {
-        //           text: 'movies',
-        //           url: '#',
-        //           active: false,
-        //       },
-        //       {
-        //           text: 'tv',
-        //           url: '#',
-        //           active: false,
-        //       },
-        //       {
-        //           text: 'games',
-        //           url: '#',
-        //           active: false,
-        //       },
-        //       {
-        //           text: 'collectibles',
-        //           url: '#',
-        //           active: false,
-        //       },
-        //       {
-        //           text: 'videos',
-        //           url: '#',
-        //           active: false,
-        //       },
-        //       {
-        //           text: 'fans',
-        //           url: '#',
-        //           active: false,
-        //       },
-        //       {
-        //           text: 'news',
-        //           url: '#',
-        //           active: false,
-        //       },
-        //       {
-        //           text: 'shop',
-        //           url: '#',
-        //           active: false,
-        //       }              
-        //   ]
-      }
   }
 }
 </script>
