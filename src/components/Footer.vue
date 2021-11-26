@@ -1,5 +1,6 @@
 <template>
   <footer>
+    <BlueBar />
     <!-- upper footer -->
     <section id="upper-footer">
       <div class="container container-flex">
@@ -36,9 +37,13 @@
 </template>
 
 <script>
+import BlueBar from "./Main/BlueBar.vue";
 
 export default {
   name: 'Footer',
+  components: {
+    BlueBar
+  },
   props: {
     menu: Array
   },
@@ -91,23 +96,7 @@ export default {
 </script>
 
 <style scoped lang="scss">
-// general rules for footer
-  footer {
-    // background-image: url('../assets/img/footer-bg.jpg');
-    // background-position: center;
-    // background-repeat: no-repeat;
-    // background-size: cover;
-    height: 45rem;
-  }
-
 // upper footer
-  // .container {
-  //   // background-image: url('../assets/img/footer-bg.jpg');
-  //   // background-position: center;
-  //   // background-repeat: no-repeat;
-  //   // background-size: cover;
-  // }
-
   #upper-footer {
     background-image: url('../assets/img/footer-bg.jpg');
     background-position: center;
@@ -125,6 +114,7 @@ export default {
       flex-wrap: wrap;
       height: 100%;
       width: 100%;
+      padding: 1rem 0;
   }
 
   .footer-menu {

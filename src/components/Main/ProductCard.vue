@@ -20,7 +20,7 @@ export default {
 <style scoped lang="scss">
     .card {
         width: calc(100% / 6);
-        height: fit-content;
+        min-height: 30rem;
         padding: 1rem;
     }
 

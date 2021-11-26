@@ -1,7 +1,10 @@
 <template>
-  <section class="container container-flex">
-      <ProductCard v-for="(product, i) in productsData" :key="i" :details="product"/>
-  </section>
+    <section>
+        <span>current series</span>
+        <div class="container container-flex">
+            <ProductCard v-for="(product, i) in productsData" :key="i" :details="product"/>
+        </div>
+    </section>
 </template>
 
 <script>
@@ -95,9 +98,25 @@ export default {
 
 <style scoped lang="scss">
     section {
+        position: relative;
+    }
+    div {
         padding: 5rem 0 4rem 0;
     }
     .container-flex {
         flex-wrap: wrap;
+    }
+
+    span {
+        display: block;
+        text-transform: uppercase;
+        color: white;
+        font-size: 2rem;
+        background-color: #0282f9;
+        padding: 1rem 2rem;
+        position: absolute;
+        top: -2.2rem;
+        left: 10rem;
+        z-index: 1;
     }
 </style>

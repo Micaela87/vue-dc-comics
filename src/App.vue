@@ -2,9 +2,10 @@
   <div id="app">
     <Header :menu="navMenuData[0].data"/>
     <main>
-      <Banner />
-      <Products />
-      <BlueBar />
+        <section id="banner">
+            <img src="@/assets/img/jumbotron.jpg" alt="banner img">
+        </section>
+        <Products />
     </main>
     <Footer :menu="navMenuData"/>
   </div>
@@ -12,9 +13,7 @@
 
 <script>
 import Header from "./components/Header.vue";
-import Banner from "./components/Main/Banner.vue";
 import Products from "./components/Main/Products.vue";
-import BlueBar from "./components/Main/BlueBar.vue";
 import Footer from "./components/Footer.vue";
 
 export default {
@@ -22,8 +21,6 @@ export default {
   components: {
     Header,
     Footer,
-    BlueBar,
-    Banner,
     Products
   },
   data() {
@@ -172,5 +169,14 @@ export default {
   font-family: Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+#banner {
+    height: 32rem;
+    overflow: hidden;
+}
+
+#banner img {
+    width: 100%;
 }
 </style>

@@ -1,29 +1,13 @@
 <template>
   <section>
-        <img :src="require('@/assets/img/' + bannerData[0].url)" :alt="bannerData[0].text">
-        <span>{{ seriesData[0].text.toUpperCase() }}</span>
+        <img src="@/assets/img/jumbotron.jpg" alt="banner img">
   </section>
 </template>
 
 <script>
 
 export default {
-  name: 'Banner',
-  data() {
-    return {
-          bannerData: [
-              {
-                  text: 'banner img 1',
-                  url: 'jumbotron.jpg'
-              }      
-          ],
-          seriesData: [
-              {
-                  text: 'current series'
-              }
-          ]
-      };
-  }
+  name: 'Banner'
 }
 </script>
 
