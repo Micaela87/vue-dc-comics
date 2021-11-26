@@ -1,8 +1,11 @@
 <template>
     <section>
-        <span>current series</span>
+        <span class="series">current series</span>
         <div class="container container-flex">
             <ProductCard v-for="(product, i) in productsData" :key="i" :details="product"/>
+        </div>
+        <div id="load-more">
+            <span>load more</span> 
         </div>
     </section>
 </template>
@@ -100,7 +103,8 @@ export default {
     section {
         position: relative;
     }
-    div {
+
+    .container {
         padding: 5rem 0 4rem 0;
     }
     .container-flex {
@@ -108,15 +112,27 @@ export default {
     }
 
     span {
-        display: block;
+        display: inline-block;
         text-transform: uppercase;
         color: white;
-        font-size: 2rem;
         background-color: #0282f9;
         padding: 1rem 2rem;
+        width: fit-content;
+    }
+
+    .series {
+        font-size: 2rem;
         position: absolute;
         top: -2.2rem;
         left: 10rem;
         z-index: 1;
     }
+
+    #load-more {
+        font-size: 1.5rem;
+        text-align: center;
+        margin-bottom: 4rem;
+        cursor: pointer;
+    }
+
 </style>
